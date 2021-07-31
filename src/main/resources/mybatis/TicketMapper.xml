@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tivattravel.demo.mapper.TicketMapper">
+
+    <select id="listTicker" resultType="tivattravel.demo.bean.Ticket">
+        select tid, tname, routeIntroduction, price, ssid from tivattravel.ticket limit #{start}, #{end};
+    </select>
+
+    <select id="getImageNamePath" parameterType="int" resultType="java.lang.String">
+        select path from tivattravel.scenery where sid=#{sid};
+    </select>
+
+</mapper>

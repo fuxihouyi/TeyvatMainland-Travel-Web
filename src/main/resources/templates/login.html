@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                if($("#id").val().length>0)
+                {
+                }else{
+                    alert("ID为空");
+                }
+            });
+            $("#btn1").click(function(){
+                if($("#pwd").val().length>0)
+                {
+                }else{
+                    alert("密码为空");
+                }
+            });
+            });
+    </script>
+    <title>login</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .main-body {
+        height: 100%;
+        width: 100%;
+        background:url(img/登录界面.jpg) no-repeat;
+        position: absolute;
+    }
+    .login{
+        border-radius: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        height: 65%;
+        width: 35%;
+    }
+    .title{
+        height: 20%;
+    }
+    .login-part{
+        border-radius: 5px;
+        width: 100%;
+        height: 80%;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: solid 1px lightgray;
+        box-shadow: 0 0 3px rgb(179, 179, 179);
+    }
+    input{
+        border-radius: 5px;
+        border:solid 1px lightgray;
+        padding:0 0;
+        color: rgb(0, 0, 0);
+        font-size: larger;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 5%;
+        width: 90%;
+        height: 60px;
+    }
+    input::-webkit-input-placeholder { 
+    /* WebKit browsers */ 
+    padding-left: 5%;
+    color: rgb(204, 204, 204); 
+    } 
+    input:-moz-placeholder { 
+    /* Mozilla Firefox 4 to 18 */ 
+    color: rgb(204, 204, 204); 
+    } 
+    input::-moz-placeholder { 
+    /* Mozilla Firefox 19+ */ 
+    color: rgb(204, 204, 204); 
+    } 
+    input:-ms-input-placeholder { 
+    /* Internet Explorer 10+ */ 
+    color: rgb(204, 204, 204); 
+    }
+
+    a{
+    font-weight: 600;
+    position: relative;
+    margin:7% 5%;
+    text-decoration:none;/*去掉a标签下划线*/
+    color: rgb(216, 164, 20);
+    font-size: large;
+    text-shadow: 0 0 2px white;
+    }
+    
+    button{
+        margin-bottom: 5px;
+        font-size:larger;
+        border-radius: 5px;
+        margin-left: 5%;
+        width: 90%;
+        height: 60px;
+        background-color: rgb(57, 59, 64);
+        color: rgb(218, 199, 147);
+        cursor: pointer;
+        text-shadow: 0 0 1px white;
+    }
+</style>
+<body>
+    <div class="main-body">
+        <div class="login">
+            <div class="title">
+                <img style="position: absolute;left: 50%;transform: translate(-50%);" src="img/mihoyo-colorful.png" alt="">
+            </div>
+            <div style="padding-top: 5%;" class="login-part">
+                <form style="" action="main.html" method="post" th:action="@{/login}">
+                    <label style="color: red" th:text="${msg}"></label>
+                    <input type="text" id="id" name="userName" placeholder="请输入账号">
+                    <input type="text" id="pwd" name="password" placeholder="请输入密码">
+                    <div>
+                        <a th:href="@{add}" style="float: left;"><span style="color: grey;">没有账号？</span>立即注册</a>
+                        <a href="" style="float: right;">忘记密码</a>
+                    </div>
+                    <button id="btn1" type="submit">进入提瓦特</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/camroll_slider.js"></script>
+</body>
+
+</html>

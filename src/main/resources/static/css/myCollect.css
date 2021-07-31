@@ -1,0 +1,18 @@
+.myCollect-body{
+    margin-left: 1%;
+    width: 98%;
+    height: 800px;
+    border-radius: 4px;
+}
+
+
+.collection-show{
+    height: 200px;
+    width:300px;
+    border: lightgrey solid 1px;
+    margin: 1%;
+    float: left;
+    padding: 10px;
+    background-color: rgb(190, 255, 255,.7);
+    border-radius: 2px;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/buttons.css">
+    <script>
+       
+    </script>
+    <title>regist</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .main-body {
+        height: 100%;
+        width: 100%;
+        background:url(./img/登录界面.jpg);
+        position: absolute;
+    }
+    .login{
+        border-radius: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-60%);
+        height: 80%;
+        width: 35%;
+    }
+    .title{
+        height: 20%;
+    }
+    .login-part{
+        border-radius: 5px;
+        width: 100%;
+        height: 90%;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: solid 1px lightgray;
+        box-shadow: 0 0 3px rgb(179, 179, 179);
+    }
+    input{
+        border-radius: 5px;
+        border:solid 1px lightgray;
+        padding:0 0;
+        color: rgb(0, 0, 0);
+        font-size: large;
+        position: relative;
+        margin-top: 15px;
+        margin-left: 5%;
+        width: 90%;
+        height: 40px;
+    }
+    input::-webkit-input-placeholder { 
+    /* WebKit browsers */ 
+    padding-left: 5%;
+    color: rgb(204, 204, 204); 
+    } 
+    input:-moz-placeholder { 
+    /* Mozilla Firefox 4 to 18 */ 
+    color: rgb(204, 204, 204); 
+    } 
+    input::-moz-placeholder { 
+    /* Mozilla Firefox 19+ */ 
+    color: rgb(204, 204, 204); 
+    } 
+    input:-ms-input-placeholder { 
+    /* Internet Explorer 10+ */ 
+    color: rgb(204, 204, 204); 
+    }
+/* 
+    a{
+    font-weight: 600;
+    position: relative;
+    margin:7% 5%;
+    text-decoration:none;
+    color: rgb(216, 164, 20);
+    font-size: large;
+    text-shadow: 0 0 2px white;
+    }
+*/
+
+    
+  
+    .font1{
+            font-size:30px;
+            background-image: -webkit-linear-gradient(bottom, rgb(203, 228, 235), rgb(78, 164, 220));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    .hide{
+        display: none;
+    }
+ .bt1{
+     position: absolute;
+     left: 50%;
+     transform: translate(-50%);
+     border: lightgrey 1px solid;
+     margin-top: 5%;
+     cursor: pointer;
+     color: rgb(73, 73, 73)
+ }
+.bt-back{
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 5%;
+    border-radius: 4px;
+    color: rgb(73, 73, 73);
+    border: lightgrey 1px solid;
+    cursor: pointer;
+
+}
+</style>
+<body>
+    <div class="main-body">
+        <div class="login">
+            <div class="title">
+                <img style="position: absolute;left: 50%;transform: translate(-50%);" src="./img/mihoyo-colorful.png" alt="">
+            </div>
+            <div style="padding-top: 5%;" class="login-part">
+                <button type="button" class="bt-back btn btn-default" onclick="javascript:window.location.href='userInfo.html'">取消修改</button>
+
+                <h1 class="font1" style="text-align: center;">个人信息</h1>
+                <form style="">
+                    <input class="read" type="text" id="id" placeholder="修改姓名" >
+                    <input type="text" id="id" placeholder="账号：XXXXXX" readonly >
+                    <input type="text" id="pwd" name="password" placeholder="修改密码" >
+                    <!-- <input type="text" id="pwd1" name="password1" placeholder="再次输入密码">   -->
+                    <input style="position: relative;" type="text" id="pwd" placeholder="修改邮箱" >
+                    <input type="text" id="id" placeholder="修改手机号" >
+                    <div style="margin-left: 5%; width: 90%;height: 40px;border: lightgray 1px solid;border-radius: 5px;margin-top: 3%;background-color: white;">
+                        <span style="float: left;position: relative;margin: 1.5% 0 0 5%;color: rgb(204, 204, 204);font-size:large;">修改性别</span>
+                        <div style="float: right;width: 40%;">
+                            <input style="height: 30px;width:15px;margin: 1% 2% 0 10%;" class="myforms-3-2" type="radio" checked ="checked" name="2" value="sex1">
+                            <span style="font-size: 20px;text-shadow: 0 0 3px blue;">♂</span>
+                            <input style="height: 30px;width:15px;margin: 1% 2% 0 10%;" class="myforms-3-3" type="radio"  name="2" value="sex2">
+                            <span style="font-size: 20px;text-shadow: 0 0 3px rgb(255, 0, 43);">♀</span>
+                        </div>
+                    </div> 
+                    <button type="button" class="bt1 btn btn-default" onclick="javascript:window.location.href='userInfo.html'">确认修改</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/camroll_slider.js"></script> 
+</body>
+</html>

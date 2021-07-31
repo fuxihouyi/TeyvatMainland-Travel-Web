@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/grids.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="css/camroll_slider.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/ticket.css">
+    <link rel="stylesheet" href="css/page.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>
+        // $(document).ready(function(){
+        //     $('#i1').click(function(){
+        //         alert($("#i1")[0].src)
+        //     })
+        // })
+        $(document).ready(function(){
+            $('#i1').hover(function(){
+                $("#bg").css({"background":"url(./img/璃月/绯云坡.png)","background-size":"cover"});
+            })
+            $('#i2').hover(function(){
+                $("#bg").css({"background":"url(./img/璃月/荻花洲.jpg","background-size":"cover"});
+            })
+            $('#i3').hover(function(){
+                $("#bg").css({"background":"url(./img/蒙德/风龙废墟.png)","background-size":"cover"});
+            })
+            $('#i4').hover(function(){
+                $("#bg").css({"background":"url(./img/蒙德/清泉镇.jpg)","background-size":"cover"});
+            })
+        })
+    </script>
+</head>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: "微软雅黑";
+    }
+    div{
+        display: block;
+    }
+    .title{
+        width: 100%;
+        height: 220px;
+        background: url(img/头背景.jpg) ;
+
+    }
+    .title-img{
+        width: 100%;
+        height: 170px;
+    }
+
+    .search{
+        width: 100%;
+        height: 150px;
+    }
+    .choice{
+        width: 100%;
+        height: 50px;
+    }
+
+    .l-a{
+        padding:10% 25%;
+        text-align: center;
+        width: 100%;
+        font-size: small;
+        margin: 2%;
+        color: black;
+    }
+    .l-a:hover{
+        color: black;
+        text-decoration : none;
+        cursor: pointer;
+    }
+    .l-a1{
+    }
+    .l-a4{
+        margin-left: 13%;
+    }
+
+    .search-list{
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 50px;
+        text-align: center;
+    }
+    input::-webkit-input-placeholder{
+        color: rgb(199, 199, 199);
+    }
+    .search-show{
+        height: 50px;
+        padding: 0 ,5px;
+    }
+    #my-slider {
+        width: 100%;
+        height: 404px;
+        color: white;
+    }
+
+    @media (max-width: 640px) {
+        #my-slider .crs-bar-roll-current {
+            width: 38px;
+            height: 38px;
+        }
+
+        #my-slider .crs-bar-roll-item {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .main-show-body{
+        background:url(img/1.jpg) ;
+        height: 500px;
+        width: 100%;
+    }
+
+    .btn{
+        box-shadow: 0 0 4px rgb(190, 190, 190);
+    }
+    .ticket-itd{
+        box-shadow: 0 0 3px lightgray;
+    }
+    .shangjia-li{
+        color: rgb(128, 128, 124);
+        text-align: center;
+        float: left;
+        margin-top: 15%;
+        margin-left: 13%;
+
+    }
+
+</style>
+<body>
+<div class="title">
+    <div class="title-img">
+        <img style="position: absolute;
+            width: 40vh;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%);
+            " src="img/tiwat.png" alt="">
+
+        <!-- <div class="login">
+
+        </div> -->
+        <div id="myname" class="myname">
+            <span class="myname-span" style="" onclick="javascript:window.location.href='userInfo'">你好! XXX 旅行者</span>
+            <div id="myname-dropdown" class="myname-dropdown">
+                <a href="myCollect" class="l-a l-a1">我的收藏</a><br>
+                <hr>
+                <a href="loginout" class="l-a l-a4">登出</a>
+            </div>
+            </span>
+        </div>
+    </div>
+    <div class="search ">
+
+        <form class="search-list ">
+            <div class="search-show d-flex flex-row justify-content-left">
+                <div onclick="javascript:window.location.href='index'"  class="col-sm-2 mr-5 ml-4 selection">
+                    首页
+                </div>
+                <div onclick="javascript:window.location.href='spot-show'"  class="col-sm-2 mr-5 selection">
+                    景区
+                </div>
+                <div onclick="javascript:window.location.href='ticket'" style="text-shadow: 0 0 10px #2ed5ff, 0 0 20px #25d2fd, 0 0 40px #16d0ff;color: white;" class="col-sm-2 mr-5 selection">
+                    门票
+                </div>
+                <div onclick="javascript:window.location.href='rank'" class="col-sm-2 mr-5 selection">
+                    景区排行榜
+                </div>
+            </div>
+            <div class="search-box d6">
+                <input type="text" placeholder="输入查询内容" class="search-box">
+                <button id="" type="button" class="search-button"></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="main-show-body">
+    <div class="show-spot" style="height: 500px;">
+        <div class="detail-itd">
+            <div id="bg" class="detail-img-show"></div>
+            <div class="detail-img-small">
+                <div class="detail-img-small-size">
+                    <img id="i1" class="detail-img-small-size-site" src="img/璃月/绯云坡.png" alt="">
+                </div>
+                <div class="detail-img-small-size">
+                    <img id="i2" class="detail-img-small-size-site" src="img/璃月/荻花洲.jpg" alt="">
+                </div>
+                <div class="detail-img-small-size">
+                    <img id="i3" class="detail-img-small-size-site" src="img/蒙德/风龙废墟.png" alt="">
+                </div>
+                <div class="detail-img-small-size">
+                    <img id="i4" class="detail-img-small-size-site" src="img/蒙德/清泉镇.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="detail-price">
+                <p class="ticket-title" th:text="${TicketContent.tname}">提瓦特豪华一日游</p>
+                <li class="ticket-line" style="color:rgb(128, 128, 124)" th:text="${TicketContent.ticketPath}">风龙废墟->狼王谷->黄金屋->层岩巨渊</li>
+                <div class="ticket-itd row" style="background-color: rgba(173, 216, 230, 0);">
+                    <div style="border-right: solid 1px #a7cddf" class="col-7 mt-3">
+                        <li class="shangjia-li" th:text="${TicketContent.bname}">商家名称：丘丘人</li>
+                        <li class="shangjia-li" th:text="${TicketContent.telephone}">联系电话：135xxxx</li>
+                        <li class="shangjia-li" th:text="${TicketContent.address}">所在地址：蒙德城404号</li>
+                    </div>
+                    <div class="col-5 mt-4">
+                        <span style="color: rgb(128, 128, 124); float: left; margin-top: 15%;">促销价：<br></span><span class="price" style="font-size: 12px;"> [[${TicketContent.price}]] W</span><span style="float: botton;margin-left: 5%;color: rgb(128, 128, 124)">摩拉</span>
+                        <div>
+                            <a type="button" class="btn btn-outline-danger" style="padding: 10px;"  th:href="@{/addCollection(TicketID=${TicketContent.tid})}">喜欢</a>
+                            <a type="button" class="btn btn-outline-secondary" style="padding: 10px;float: right;"  th:href="@{/removeCollection(TicketID=${TicketContent.tid})}">不喜欢</a>
+                            <p style="float: right;  color:  rgba(128, 128, 124, 0.925);  margin-top: 40px;" >收藏人数：[[${TicketContent.collectionNum}]]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="footer row justify-content-around">
+    <div class="col-3">
+        <img style="height: 60%;margin-left: 50%;transform: translate(-50%,20%);"  src="img/原神.png" alt="">
+    </div>
+    <div class="col-8">
+        <p  style="position: relative;color: beige;font-size: large;top: 50%;transform: translate(0,-100%);">抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。合理安排时间，享受健康生活。</p>
+    </div>
+
+</div>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/page1.js"></script>
+
+</body>
+</html>

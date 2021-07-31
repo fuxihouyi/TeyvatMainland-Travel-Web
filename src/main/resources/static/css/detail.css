@@ -1,0 +1,55 @@
+.detail-itd{
+    margin: 2% 1%;
+    height: 80%;
+    width: 98%;
+    background-color: rgba(211, 211, 211, 0.521);
+    border-radius: 4px;
+}
+.detail-img-show{
+    position: absolute;
+    left: 2%;
+    top: 10%;
+    width:50% ;
+    height: 70%;
+    background:url(../img/璃月/绯云坡.png);
+    background-color: white;
+    background-size: cover;
+    box-shadow: 0 0 4px rgb(255, 255, 255);
+}
+.detail-img-small{
+    float: left;
+    position: relative;
+    left: 52%;
+    top: 6%;
+    width:10% ;
+    height: 88%;
+    box-shadow: 0 0 4px rgb(255, 255, 255);
+
+}
+
+.detail-price{
+    float: left;
+    position: relative;
+    left: 53%;
+    top: 6%;
+    width:35% ;
+    height: 88%;
+    background-color: #a7cddf;
+    box-shadow: 0 0 4px rgb(255, 255, 255);
+}
+
+.detail-img-small-size{
+    margin: 2.5% 0;
+    width: 100%;
+    height: 24%;
+}
+
+.detail-img-small-size-site{
+    height: 100%;
+    width: 100%;
+}
+
+#i1:hover .detail-img-show{
+    background:url(../img/璃月/归离原.png);
+}
+

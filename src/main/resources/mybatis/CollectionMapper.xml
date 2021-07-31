@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tivattravel.demo.mapper.CollectionMapper">
+    <select id="addCollection" >
+        insert into tivattravel.collection(tid, id) values (#{tid}, #{id});
+    </select>
+
+    <select id="removeCollection" >
+        delete from tivattravel.collection where tid=#{tid} and id=#{id};
+    </select>
+
+</mapper>

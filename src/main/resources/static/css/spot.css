@@ -1,0 +1,95 @@
+li{
+    list-style: none;
+    text-shadow: 0 0 1px white;
+}
+
+.each-spot{
+    position: relative;
+    left: 10%;
+    margin-top: 40px;
+    height: 250px;
+    width: 80%;
+    background-color: rgba(202, 255, 251, 0.562);
+    border-radius: 4px 4px 10px 10px;
+    box-shadow: 0 0 8px white;
+  }
+
+.show-spot{
+    position: absolute;
+    padding-top: 2px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    height: 1300px;
+    background-color: rgba(128, 128, 128, 0.3);
+    }
+
+    .big-img{
+        height: 90%;
+        width: 90%;
+        left: 5%;
+        top: 5%;
+        border-radius: 5px;
+      }
+
+      .big-img:after {
+        position: absolute;
+        content: '';
+        margin-left: 2.5%;
+        width: 95%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        box-shadow:0 0 50px 30px #c8ebff inset;
+        border-radius: 5px;
+    }
+      .small-img{
+        height: 90%;
+        left: 5%;
+        top: 5%;
+      }   
+
+.img-show{
+    height: 100%;
+    width: 100%;
+}
+.simple-intro-h{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+.simple-intro{
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    width: 80%;
+    height: 60%;
+}
+
+ul{
+    font-size: large;
+}
+.each-spot li{
+    margin: 2% 5%;
+    text-indent: 30px;
+}
+
+.simple-intro::-webkit-scrollbar {
+    display: none;/*隐藏滚动条*/
+}
+
+.main-show-body{
+    background:url(../img/1.jpg) ;
+    height: 1300px;
+    width: 100%;
+    }

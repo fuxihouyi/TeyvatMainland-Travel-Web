@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/htmleaf-demo.css">
+    <link href="css/camroll_slider.css" rel="stylesheet"> 
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        // $(document).ready(function(){
+        //     $("#myname").click(function(){
+        //         $("#myname-dropdown").fadeToggle(200);
+        //     });
+        // });
+    </script>
+</head>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: "微软雅黑";
+    }
+    div{
+        display: block;
+    }
+    .title{
+        width: 100%;
+        height: 220px;
+        background: url(./img/头背景.jpg) ;
+
+    }
+    .title-img{
+        width: 100%;
+        height: 170px;
+    }
+
+    .search{
+        width: 100%;
+        height: 150px;
+    }
+    .choice{
+        width: 100%;
+        height: 50px;
+    }
+
+    .l-a{
+        padding:10% 25%;
+        text-align: center;
+        width: 100%;
+        font-size: small;
+        margin: 2%;
+        color: black;
+    }
+    .l-a:hover{
+        color: black;
+        text-decoration : none;
+        cursor: pointer;
+    }
+    .l-a1{
+    }
+    .l-a4{
+        margin-left: 13%;
+    }
+
+    .search-list{
+        
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 50px;
+        text-align: center;
+    }
+    input::-webkit-input-placeholder{
+        color: rgb(199, 199, 199);
+    }
+    .search-show{
+        height: 50px;
+        padding: 0 5px;
+    }
+    #my-slider {
+      width: 100%;
+      height: 404px;
+      color: white;
+    }
+
+    @media (max-width: 640px) {
+      #my-slider .crs-bar-roll-current {
+        width: 38px;
+        height: 38px;
+      }
+
+      #my-slider .crs-bar-roll-item {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+</style>
+<body>
+    <div class="title">
+        <div class="title-img">
+            <img style="position: absolute;
+            width: 40vh;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%);
+            " src="img/tiwat.png" alt="">
+
+            <!-- <div class="login" javascript:window.location.href='userInfo'>
+
+            </div> -->
+            <div id="myname" class="myname">
+                <span class="myname-span" style="" onclick="" >你好<a  th:href="@{/userInfo1(name=${session.loginUser.userName})}">[[${session.loginUser.userName}]]</a>旅行者</span>
+                <div id="myname-dropdown" class="myname-dropdown">
+                    <a href="myCollect" class="l-a l-a1">我的收藏</a><br>
+                    <hr>
+                    <a href="loginout" class="l-a l-a4">登出</a>
+                </div>
+                </span>
+            </div>
+        </div>
+        <div class="search ">
+            
+        <form class="search-list ">
+            <div class="search-show d-flex flex-row justify-content-left">
+                <div onclick="javascript:window.location.href='main'" style="text-shadow: 0 0 10px #2ed5ff, 0 0 20px #25d2fd, 0 0 40px #16d0ff;color: white;" class="col-sm-2 mr-5 ml-4 selection">
+                    首页
+                </div>
+                <div onclick="javascript:window.location.href='spot-show'" class="col-sm-2 mr-5 selection">
+                    景区
+                </div>
+                <div onclick="javascript:window.location.href='ticket'" class="col-sm-2 mr-5 selection">
+                    门票
+                </div>
+                <div onclick="javascript:window.location.href='rank'" class="col-sm-2 mr-5 selection">
+                    景区排行榜
+                </div>
+            </div>
+            <div class="search-box d6">
+                <input type="text" placeholder="输入查询内容" class="search-box">
+                <button id="" type="button" class="search-button"></button>
+            </div>
+        </form>
+        </div>
+    </div>  
+    <div class="main-show-body">
+                <!-- slider -->
+                <div style="" id="my-slider" class="crs-wrap">
+                  <div class="crs-screen">
+                    <div class="crs-screen-roll">
+                      <div class="crs-screen-item" style="background-image: url('img/1.jpg')">
+                        <div class="crs-screen-item-content"><h1>蒙德城</h1></div>
+                      </div>
+                      <div class="crs-screen-item" style="background-image: url('img/2.jpg')">
+                        <div class="crs-screen-item-content"><h1>璃月港</h1></div>
+                      </div>
+                      <div class="crs-screen-item" style="background-image: url('img/3.png')">
+                        <div class="crs-screen-item-content"><h1>孤云阁</h1></div>
+                      </div>
+                      <div class="crs-screen-item" style="background-image: url('img/4.png')">
+                        <div class="crs-screen-item-content"><h1>风龙废墟</h1></div>
+                      </div>
+                      <div class="crs-screen-item" style="background-image: url('img/5.png')">
+                        <div class="crs-screen-item-content"><h1>石林</h1></div>
+                      </div>
+                      <div class="crs-screen-item" style="background-image: url('img/6.png')">
+                        <div class="crs-screen-item-content"><h1>蒙德大教堂</h1></div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="crs-bar">
+                    <div class="crs-bar-roll-current"></div>
+                    <div class="crs-bar-roll-wrap">
+                      <div class="crs-bar-roll">
+                        <div class="crs-bar-roll-item" style="background-image: url('img/1.jpg')"></div>
+                        <div class="crs-bar-roll-item" style="background-image: url('img/2.jpg')"></div>
+                        <div class="crs-bar-roll-item" style="background-image: url('img/3.png')"></div>
+                        <div class="crs-bar-roll-item" style="background-image: url('img/4.png')"></div>
+                        <div class="crs-bar-roll-item" style="background-image: url('img/5.png')"></div>
+                        <div class="crs-bar-roll-item" style="background-image: url('img/6.png')"></div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    <div class="show-spot">
+        <div class="mengde row">
+            <div class="col-2 big-img-mengde">
+                <img style="width: 12vh;left: 50%;position: relative;transform: translate(-50%);" src="img/蒙德/蒙德标志2.png" alt="">
+                <p style="text-align: center;font-weight: 400;font-size: 4.6vh;margin: 0;position: relative;">蒙德</p>
+                <p1 style="float: right;font-size: 2.0vh;font-weight: 500; color: rgb(66, 66, 66);">—自由之城</p1>
+                <img style="width: 20vh;position: relative;left: 50%;bottom: -10%; position: relative;transform: translate(-50%);border-radius:5px 14px 5px 14px;" src="img/蒙德/蒙德标志.jpg" alt="">
+            </div>
+            <div class="col-9 small-img-mengde row">
+                <div class="small-img-div col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px ;" src="img/蒙德/千风神殿.jpg" alt="">
+                    <p style="text-align: center;line-height: 30px">岁月印痕：千风神殿</p>
+                </div>
+                <div class="small-img-div col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px " src="img/蒙德/晨曦酒庄.png" alt="">
+                    <p style="text-align: center;line-height: 30px">落日余晖：晨曦酒庄</p>
+                </div>
+                <div class="small-img-div col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px " src="img/蒙德/鹰翔海滩.jpg" alt="">
+                    <p style="text-align: center;line-height: 30px">浅水鱼欢：鹰翔海滩</p>
+                </div>
+                <div class="small-img-div col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px " src="img/蒙德/誓言岬.jpg" alt="">
+                    <p style="text-align: center;line-height: 30px">坚贞不渝：誓言岬</p>
+                </div>
+            </div>
+        </div>
+        <img style="position: relative;left: 50%;transform: translate(-50%);top: 1%;" src="img/分割线.png" alt="">
+        <div class="liyue row">
+            <div class="col-2 big-img-liyue">
+                <img style="width: 12vh;left: 50%;position: relative;transform: translate(-50%);" src="img/璃月/璃月标志2.png" alt="">
+                <p style="text-align: center;font-weight: 400;font-size: 4.6vh;margin: 0;position: relative;">璃月</p>
+                <p1 style="float: right;font-size: 2.0vh;font-weight: 500;color: rgb(66, 66, 66);">—契约之城</p1>
+                <img style="width: 20vh;position: relative;left: 50%;bottom: -10%;position: relative;transform: translate(-50%);border-radius:5px 14px 5px 14px;" src="img/璃月/璃月标志.jpg" alt="">
+            </div>
+            <div class="col-9 small-img-liyue row">
+                <div class="small-img-div-liyue col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px ;" src="img/璃月/天衡山.jpg" alt="">
+                    <p style="text-align: center; line-height: 30px">诸神战场：天衡山</p>
+                </div>
+                <div class="small-img-div-liyue col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px " src="img/璃月/绝云间.jpg" alt="">
+                    <p style="text-align: center;line-height: 30px">云雾峻岭：绝云间</p>
+                </div>
+                <div class="small-img-div-liyue col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px " src="img/璃月/荻花洲.jpg" alt="">
+                    <p style="text-align: center;line-height: 30px">河滩商道：荻花洲</p>
+                </div>
+                <div class="small-img-div-liyue col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px " src="img/璃月/轻策庄.jpg" alt="">
+                    <p style="text-align: center;line-height: 30px">梯田小径：轻策庄</p>
+                </div>
+        </div>
+        <img style="position: relative;left: 50%;transform: translate(-50%);top: 15%;" src="img/分割线.png" alt="">
+        <div class="hot-spot-div row">
+            <div class="col-2 big-img-hotspot mr-5">
+                <p style="position: absolute;text-align: center;font-size:3.5vh;font-weight:900;line-height: 10vh;text-shadow: 0 0 2px white;">飞行大师推荐</p>
+                <img style="height: 80%;position: absolute;bottom: 4px;float: left;margin-left: -200px;z-index: 9;" src="img/安柏推荐.png" alt="">
+            </div>
+            <div class="col-9 big-img-hotspot row">
+                <div class="small-img-div-anbo col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px ;" src="img/璃月/天衡山.jpg" alt="">
+                    <p style="text-align: center; line-height: 30px">诸神战场：天衡山</p>
+                </div>
+                <div class="small-img-div-anbo col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px " src="img/璃月/绝云间.jpg" alt="">
+                    <p style="text-align: center;line-height: 30px">云雾峻岭：绝云间</p>
+                </div>
+                <div class="small-img-div-anbo col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px " src="img/璃月/荻花洲.jpg" alt="">
+                    <p style="text-align: center;line-height: 30px">河滩商道：荻花洲</p>
+                </div>
+                <div class="small-img-div-anbo col-5 mt-3 ml-5">
+                    <img style="height: 80%;width:100%;margin-top:10px " src="img/璃月/轻策庄.jpg" alt="">
+                    <p style="text-align: center;line-height: 30px">梯田小径：轻策庄</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    </div>
+    <div class="footer row justify-content-around">
+        <div class="col-3">
+            <img style="height: 60%;margin-left: 50%;transform: translate(-50%,20%);"  src="img/原神.png" alt="">
+        </div>
+        <div class="col-8">
+            <p style="position: relative;color: beige;font-size: large;top: 50%;transform: translate(0,-50%);">抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。合理安排时间，享受健康生活。</p>
+        </div>
+ 
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/camroll_slider.js"></script> 
+    <script>
+		$("#my-slider").camRollSlider();
+	</script>
+</body>
+</html>

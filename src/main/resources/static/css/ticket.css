@@ -1,0 +1,150 @@
+li{
+    list-style: none;
+}
+
+.each-spot{
+    position: relative;
+    left: 5%;
+    margin-top: 40px;
+    height: 300px;
+    width: 90%;
+    background-color: rgba(202, 255, 251, 0.5);
+    border-radius: 2px 15px 2px 15px;
+
+  }
+
+.show-spot{
+    position: absolute;
+    padding-top: 2px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    height: 1500px;
+    background-color: rgba(128, 128, 128, 0.3);
+    
+    }
+
+    .big-img{
+        height: 90%;
+        width: 90%;
+        left: 0%;
+        top: 5%;
+        border-right: 1px solid lightblue;
+      }
+
+      .small-img{
+        height: 90%;
+        left: 6%;
+        top: 5%;
+        background-color: rgb(238, 238, 238);
+        border: 2px solid gray;
+        border-radius: 0 7px 7px 0;
+      }   
+
+.img-show{
+    height: 100%;
+    width: 100%;
+}
+.simple-intro-h{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+.simple-intro{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 80%;
+    height: 60%;
+}
+
+ul{
+    font-size: large;
+}
+
+
+.simple-intro::-webkit-scrollbar {
+    display: none;/*隐藏滚动条*/
+}
+
+    .ticket-title{
+        margin: 2%;
+        font-size: larger;
+        font-weight: 600;
+        margin-top: 2%;
+        text-align: center;
+        font-size: larger;
+        color: white;
+        text-shadow: 0 0 2px black;
+    }
+    .ticket-itd{
+        position: relative;
+        background-color: rgb(124, 223, 253);
+        width: 100%;
+        height: 60%;
+        box-shadow: 0 0 9px rgb(16, 207, 255) ;
+    }
+
+
+
+    .price{
+        line-height: 200%;
+        margin-left: 10%;
+        text-shadow:0 0 2px rgb(255, 255, 255);
+        text-shadow: 0 3px rgb(0, 0, 0);
+        text-shadow:3px 3px 6px rgb(141, 141, 141);
+        font-size: xx-large;
+        color: yellow;
+    }
+
+    .ticket-line{
+        font-size:medium;
+        color: rgb(95, 95, 95);
+        margin-bottom: 4%;
+         text-align: center;
+         text-shadow: 0 0 2px white;
+    }
+
+    .ticket-img{
+        position: absolute;
+        height: 50%;
+        width: auto;
+        transition:all .5s;
+    }
+
+    .ticket-img:hover{
+        height: 100%;
+        width: auto;
+        z-index: 9;
+    }
+
+    .ticket-button{
+        box-shadow: 0 0 4px grey;
+        background-color: rgb(236, 251, 255);
+        color: gray;
+        padding: 10px;
+        bottom: 5%;
+        right: 5%;
+        border-radius: 4px;
+        border: solid 1px lightgrey;
+        position: absolute;
+        float: right;
+    }
+
+    .btn-outline-light{
+        float:right;
+        padding: 10px;  
+        font-weight: normal;
+        color:rgb(119, 119, 119);;
+        background-color: rgb(124, 223, 253);
+
+    }
+    .btn-outline-light:hover{
+        background-color:rgb(11, 217, 253);
+    }
+    
