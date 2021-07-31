@@ -9,7 +9,7 @@
     </select>
 
     <select id="getCollectionNumByTid" resultType="int">
-         select count(*) as collectionNum from ticket, collection where ticket.tid=collection.tid and ticket.tid=#{tid};
+        select count(distinct collection.id) as collectionNum from ticket, collection where ticket.tid=collection.tid and ticket.tid=#{tid};
     </select>
 
     <select id="getNameAndImageBySId" resultType="tivattravel.demo.bean.Scenery">
